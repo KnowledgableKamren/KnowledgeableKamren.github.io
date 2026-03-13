@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Platform Example</title>
+    <style>
+        #platformCanvas {
+            border: 1px solid #ff1212;
+            background: #1a1414;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="platformCanvas" width="800" height="600"></canvas>
+    <script>
+        function createPlatform(x, y, width, height) {
+            const canvas = document.getElementById('platformCanvas');
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#4CAF50';
+            ctx.fillRect(x, y, width, height);
+        }
+
+        createPlatform(500, 300, 200, 20);
+    </script>
+</body>
+</html>
